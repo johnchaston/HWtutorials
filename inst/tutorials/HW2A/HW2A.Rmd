@@ -20,11 +20,37 @@ To use R help, type `help()`, with the name of the function you want help for in
 help(data)
 ```
 
-Write the R code required to add two plus two:
+## Loading datasets
 
-```{r two-plus-two, exercise=TRUE}
+### Exercise 1
+
+To use data, you must first make it available in your environment. One way to do this is to read it in, as from an excel file. You'll do that in the HW, but it's not as useful to use on these online exercises.
+
+To load data here, you can use the `data()` command, which will load a dataset that is already available in R. After skimming the help page for `data()`, run the command that will show you the list of all datasets available to load. Then load the dataset that has data for an ELISA assay of DNAse.
+
+Show that you properly loaded the data by showing the structure of the DNase dataframe.
+Consult the Base R cheatsheet to find the function you need. 
+
+```{r loading_datasets, exercise=TRUE, exercise.lines = 5}
+
 
 ```
+
+
+## Installing R Packages
+
+### Exercise 1
+
+You can add new functions to R by installing new packages. Packages have a set of functions in that that can all be loaded into your R environment after installing. Let's install the package seqinr, a package that allows you to read in and work with DNA sequences. Consult the Base R cheatsheet to find the function you need, and run it below.
+
+Inside of the function you should type 'seqinr'
+
+*This package may take 1-2 minutes to install*
+
+```{r loading_datasets, exercise=TRUE}
+
+```
+
 
 ### Exercise with Code
 
