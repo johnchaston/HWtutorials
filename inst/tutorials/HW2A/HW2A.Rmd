@@ -6,6 +6,8 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+install.packages(gradethis)
+library(gradethis)
 knitr::opts_chunk$set(echo = FALSE)
 gradethis::gradethis_setup()
 ```
