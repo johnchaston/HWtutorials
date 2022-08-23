@@ -54,7 +54,7 @@ Inside of the function you should type 'seqinr'
 
 *This package may take 1-2 minutes to install*
 
-```{r loading_datasets, exercise=TRUE}
+```{r installing_packages, exercise=TRUE}
 
 ```
 
@@ -79,7 +79,7 @@ Another way to do this is to load all of the package's functions into your envir
 
 Now call these commands. They should give the same answers as when you called them above.
 
-```{r library_packages, exercise=TRUE}
+```{r library_packages2, exercise=TRUE}
 toycds2 <- s2c("tctgagcaaataaatcgg")
 translate(seq = toycds2)
 ```
@@ -180,7 +180,7 @@ Change the value of the `var1` variable to `7`
 
 Paste and rerun the code from three steps above, where you created the variable `var3`. Then print `var3`.
 
-```{r change_value, exercise=TRUE}
+```{r paste_rerun, exercise=TRUE}
 
 ```
 
