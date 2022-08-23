@@ -48,7 +48,7 @@ Consult the Base R cheatsheet to find the function you need.
 
 ### Exercise 1
 
-You can add new functions to R by installing new packages. Packages have a set of functions in that that can all be loaded into your R environment after installing. Let's install the package seqinr, a package that allows you to read in and work with DNA sequences. Consult the Base R cheatsheet to find the function you need, and run it below.
+You can add new functions to R by installing new packages. Packages have a set of functions in that that can all be loaded into your R environment after installing. Let's install the package `seqinr`, a package that allows you to read in and work with DNA sequences. Consult the Base R cheatsheet to find the function you need, and run it below.
 
 Inside of the function you should type 'seqinr'
 
@@ -58,3 +58,130 @@ Inside of the function you should type 'seqinr'
 
 ```
 
+## Loading R Packages
+
+### Exercise 1
+
+Now that the package is installed you can access its functions in one of two ways. Consult the *Base R* cheatsheet under *Using Packages* to find out how to do this.
+
+First, you can call an individual function behind the name of the package. We'll do this for two functions below that will read in a sequence as DNA letters and then translate those leters into amino acids.
+
+```{r loading_packages, exercise=TRUE}
+toycds <- seqinr::s2c("tctgagcaaataaatcgg")
+seqinr::translate(seq = toycds)
+```
+
+Another way to do this is to load all of the package's functions into your environment and call the functions without `seqinr::` in front of them. Find the function you need in the *Base R* cheatsheet and call it.
+
+```{r library_packages, exercise=TRUE}
+
+```
+
+Now call these commands. They should give the same answers as when you called them above.
+
+```{r library_packages, exercise=TRUE}
+toycds2 <- s2c("tctgagcaaataaatcgg")
+translate(seq = toycds2)
+```
+
+Convention is to library the package and then just call the function. But sometimes you need to call it specifically using the :: trick, especially if two packages have the same function name!
+
+## Basic arithmetic
+
+### Exercise 1
+
+Let's review some basic arithmetic commands (help is available under the name `Arithmetic`). Review the documentation to understand how to
+
+-add
+-subtract
+-multiply
+-divide
+-do integer division (i.e. `16/9 = 1`)
+-get the remainder after dividing (i.e. `16/9 = 1`, remainder `7` (the function returns only `7`))
+These are important arithmetic functions you'll use throughout your time with R.
+
+First, add 21 and 3
+
+```{r adding, exercise=TRUE}
+
+```
+
+Subtract 3 from 21
+
+```{r subtracting, exercise=TRUE}
+
+```
+
+Multiply 21 by 3
+
+```{r multiplying, exercise=TRUE}
+
+```
+
+Divide 21 by 9
+
+```{r dividing, exercise=TRUE}
+
+```
+
+Perform integer division: divide 21 by 9
+
+```{r integer_division, exercise=TRUE}
+
+```
+
+Describe what integer devision is. Type your answer inside of print("YOUR ANSWER HERE")
+
+```{r int_div_explanation, exercise=TRUE}
+
+```
+
+## Using variables
+
+### Exercise 1
+
+Complete the following exercises to show you can use variables.
+
+Store the value `21` in the variable `var1`
+
+```{r storing, exercise=TRUE}
+
+```
+
+Store the value `3` in the variable `var2`
+
+```{r storing2, exercise=TRUE}
+
+```
+
+Calculate the product of `var1` and `var2`
+
+```{r var_product, exercise=TRUE}
+
+```
+
+Store the calculation of the product of `var1` and `var2` in the variable `var3`
+
+```{r storing_product, exercise=TRUE}
+
+```
+
+Print the value of `var3`
+
+```{r print_var, exercise=TRUE}
+
+```
+
+Change the value of the `var1` variable to `7`
+
+```{r change_value, exercise=TRUE}
+
+```
+
+Paste and rerun the code from three steps above, where you created the variable `var3`. Then print `var3`.
+
+```{r change_value, exercise=TRUE}
+
+```
+
+Notice that the same equation `var3 <- var1 * var2` gave you a different answer depending on the value assigned to `var1`. Be careful, because if you don't know the values stored in your variables you can get wrong answers!
