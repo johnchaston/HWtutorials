@@ -7,6 +7,7 @@ runtime: shiny_prerendered
 ```{r setup, include=FALSE}
 library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
+gradethis_setup()
 ```
 
 
@@ -28,12 +29,27 @@ To use data, you must first make it available in your environment. One way to do
 
 To load data here, you can use the `data()` command, which will load a dataset that is already available in R. After skimming the help page for `data()`, run the command that will show you the list of all datasets available to load. Then load the dataset that has data for an ELISA assay of DNAse.
 
-Show that you properly loaded the data by showing the structure of the DNase dataframe.
-Consult the `Base R` cheatsheet to find the function you need. 
-
-```{r loading_datasets, exercise=TRUE, exercise.lines = 5}
+```{r available_datasets, exercise=TRUE, exercise.lines = 5}
 
 
+```
+
+```{r available_datasets-check}
+grade_result(
+  pass_if(~identical(.result, data()))
+)
+```
+
+Then load the dataset that has data for an ELISA assay of DNAse.
+
+```{r loading_datasets, exercise=TRUE}
+
+```
+
+```{r loading_datasets-check}
+grade_result(
+  pass_if(~identical(.result, data(DNase)))
+)
 ```
 
 Show that you properly loaded the data by showing the structure of the DNase dataframe.
@@ -42,6 +58,12 @@ Consult the `Base R` cheatsheet to find the function you need.
 ```{r proper_loading, exercise=TRUE}
 
 
+```
+
+```{r proper_loading-check}
+grade_result(
+  pass_if(~identical(.result, str(DNase)))
+)
 ```
 
 ## Installing R Packages
