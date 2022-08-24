@@ -31,7 +31,7 @@ help(data)
 
 To use data, you must first make it available in your environment. One way to do this is to read it in, as from an excel file. You'll do that in the HW, but it's not as useful to use on these online exercises.
 
-To load data here, you can use the `data()` command, which will load a dataset that is already available in R. After skimming the help page for `data()`, run the command that will show you the list of all datasets available to load. Then load the dataset that has data for an ELISA assay of DNAse.
+To load data here, you can use the `data()` command, which will load a dataset that is already available in R. After skimming the help page for `data()`, run the command that will show you the list of all datasets available to load.
 
 ```{r available_datasets, exercise=TRUE, exercise.lines = 5}
 
@@ -86,6 +86,13 @@ Inside of the function you should type 'seqinr'
 
 ```
 
+```{r installing_packages-solution}
+install.packages('seqinr')
+```
+
+```{r installing_packages-code-check}
+grade_code()
+```
 ## Loading R Packages
 
 ### Exercise 1
@@ -103,6 +110,14 @@ Another way to do this is to load all of the package's functions into your envir
 
 ```{r library_packages, exercise=TRUE}
 
+```
+
+```{r library_packages-solution}
+library('seqinr')
+```
+
+```{r library_packages-code-check}
+grade_code()
 ```
 
 Now call these commands. They should give the same answers as when you called them above.
@@ -134,10 +149,22 @@ First, add 21 and 3
 
 ```
 
+```{r adding-check}
+grade_result(
+  pass_if(~identical(.result, 24))
+)
+```
+
 Subtract 3 from 21
 
 ```{r subtracting, exercise=TRUE}
 
+```
+
+```{r subtracting-check}
+grade_result(
+  pass_if(~identical(.result, 18))
+)
 ```
 
 Multiply 21 by 3
@@ -146,10 +173,22 @@ Multiply 21 by 3
 
 ```
 
+```{r multiplying-check}
+grade_result(
+  pass_if(~identical(.result, 63))
+)
+```
+
 Divide 21 by 9
 
 ```{r dividing, exercise=TRUE}
 
+```
+
+```{r dividing-check}
+grade_result(
+  pass_if(~identical(.result, (21/9)))
+)
 ```
 
 Perform integer division: divide 21 by 9
@@ -158,11 +197,22 @@ Perform integer division: divide 21 by 9
 
 ```
 
+```{r integer_division-check}
+grade_result(
+  pass_if(~identical(.result, (21 %/% 9)))
+)
+```
+
 Describe what integer devision is. Type your answer inside of print("YOUR ANSWER HERE")
 
 ```{r int_div_explanation, exercise=TRUE}
 
 ```
+
+```{r int_div_explanation-solution}
+print("Something similar to: Integer division is division where the remainder is discarded. For example, 21/9 = 2 and 3/9, but the 3/9 is removed so the answer is only 2.")
+```
+
 
 ## Using variables
 
@@ -176,10 +226,26 @@ Store the value `21` in the variable `var1`
 
 ```
 
+```{r storing-solution}
+var1 <- 21
+```
+
+```{r storing-code-check}
+grade_code()
+```
+
 Store the value `3` in the variable `var2`
 
 ```{r storing2, exercise=TRUE}
 
+```
+
+```{r storing2-solution}
+var2 <- 3
+```
+
+```{r storing2-code-check}
+grade_code()
 ```
 
 Calculate the product of `var1` and `var2`
@@ -188,10 +254,24 @@ Calculate the product of `var1` and `var2`
 
 ```
 
+```{r var_product-check}
+grade_result(
+  pass_if(~identical(.result, 63))
+)
+```
+
 Store the calculation of the product of `var1` and `var2` in the variable `var3`
 
 ```{r storing_product, exercise=TRUE}
 
+```
+
+```{r storing_product-solution}
+var3 <- var1 * var2
+```
+
+```{r storing_product-code-check}
+grade_code()
 ```
 
 Print the value of `var3`
@@ -200,16 +280,36 @@ Print the value of `var3`
 
 ```
 
+```{r print_var-check}
+grade_result(
+  pass_if(~identical(.result, 63))
+)
+```
+
 Change the value of the `var1` variable to `7`
 
 ```{r change_value, exercise=TRUE}
 
 ```
 
+```{r change_value-solution}
+var1 <- 7
+```
+
+```{r change_value-code-check}
+grade_code()
+```
+
 Paste and rerun the code from three steps above, where you created the variable `var3`. Then print `var3`.
 
 ```{r paste_rerun, exercise=TRUE}
 
+```
+
+```{r paste_rerun-check}
+grade_result(
+  pass_if(~identical(.result, 21))
+)
 ```
 
 Notice that the same equation `var3 <- var1 * var2` gave you a different answer depending on the value assigned to `var1`. Be careful, because if you don't know the values stored in your variables you can get wrong answers!
