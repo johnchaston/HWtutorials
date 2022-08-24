@@ -22,7 +22,7 @@ gradethis::gradethis_setup()
 To use R help, type `help()`, with the name of the function you want help for inside of the parentheses. For example, to use R help to use the `data()` function, type and run the following:
 
 ```{r help_data, exercise=TRUE}
-help(data)
+help('data')
 ```
 
 ## Loading datasets
