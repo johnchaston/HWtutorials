@@ -5,9 +5,11 @@ runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
-library(learnr)
-install.packages(gradethis)
-library(gradethis)
+library("learnr")
+install.packages("testthat")
+install.packages("remotes")
+remotes::install_github("rstudio/gradethis")
+#library(gradethis)
 knitr::opts_chunk$set(echo = FALSE)
 gradethis::gradethis_setup()
 ```
@@ -48,10 +50,12 @@ Then load the dataset that has data for an ELISA assay of DNAse.
 
 ```
 
-```{r loading_datasets-check}
-grade_result(
-  pass_if(~identical(.result, data(DNase)))
-)
+```{r loading_datasets-solution}
+data(DNase)
+```
+
+```{r loading_datasets-code-check}
+grade_code()
 ```
 
 Show that you properly loaded the data by showing the structure of the DNase dataframe.
